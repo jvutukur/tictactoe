@@ -6,36 +6,37 @@ import Row from './row'
 
 class App extends Component {
 
-  render()
-  {
-      var a=[];
+    constructor()
+    {
+        super();
+        this.state = {
+          squares : Array(9).fill(null),
+        };
+        for(var i=0; i<9; i++){
+            this.state.squares[i]=i+1;//squares.
+        }
 
-      var i=0;
-      for(;i<9; i++)
-      {
-          a[i]=i+1;
-      }
-      function ready(){
-
-
-
-      }
-      function handlechange() {
-          a[0]="x";
-
-      }
+    };
+    /*
+     position:absolute;
+     top: 30%;
+     left: 30%;
+     */
+  render() {
+    const status = 'Next Player : X';
     return (
         <div>
 
-        <button class="btn" onclick={ready} id="reset">reset</button>
-            <div className="container title">
+        <button className="btn"  id="reset">reset</button>
+            <div className="container1 title">
                 Tic Tac Toe</div>
-            <div className="container description">Two Human Players - X Moves First</div>
+
             <div className="container text-center">
-            <Row className="row" onchange={handlechange} numb={a[0]} numb1={a[1]} numb2={a[2]}/>
-            <Row className="row" onchange={handlechange} numb={a[3]} numb1={a[4]} numb2={a[5]}/>
-            <Row className="row" onchange={handlechange} numb={a[6]} numb1={a[7]} numb2={a[8]}/>
+            <Row className="row"  numb={this.state.squares[0]} numb1={this.state.squares[1]} numb2={this.state.squares[2]}/>
+            <Row className="row"  numb={this.state.squares[3]} numb1={this.state.squares[4]} numb2={this.state.squares[5]}/>
+            <Row className="row"  numb={this.state.squares[6]} numb1={this.state.squares[7]} numb2={this.state.squares[8]}/>
             </div>
+            <div className="container1 status">{status} </div>
         </div>
 
             );
