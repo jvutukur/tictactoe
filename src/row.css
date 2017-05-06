@@ -1,0 +1,20 @@
+.row:nth-of-type(1){
+    border-bottom-style: solid;
+    line-height: 100px;
+}
+.row:nth-of-type(2){
+    border-bottom-style: solid;
+    line-height: 100px;
+}
+.square:nth-of-type(2){
+    border-left-style: solid;
+    border-right-style: solid;
+}
+.row {
+    float: inherit;
+}
+.row:after {
+    clear: both;
+    content: "";
+    display: table;
+}
