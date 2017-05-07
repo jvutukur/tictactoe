@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import './App.css';
-import Row from './row'
+import Row from '../row/row'
 
 
 class App extends Component {

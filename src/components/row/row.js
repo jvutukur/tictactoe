@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Square from './components/square/square';
+import Square from '../square/square';
 class Row extends Component {
 
     constructor(props)
