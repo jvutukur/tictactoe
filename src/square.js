@@ -9,30 +9,15 @@ class Square extends Component {
           stateValue:props.propValue,
         };
     }
-    nextMove(){
-        if(mov%2==0)
-        {
-            this.setState({stateValue: 'X'})
-        }
-        else
-            this.setState({stateValue: '0'})
-    }
 
-    render() {
+
+
+     render() {
+         this.state = {
+             stateValue: this.props.propValue,
+         };
         return (
-            <div className="col-xs-4 square" onClick={() => {
-                if (mov % 2 == 0) {
-                    mov++;
-                    this.setState({stateValue: 'X'})
-                }
-                else {
-                    mov++;
-                    this.setState({stateValue: '0'})
-                }
-            }
-
-            }>
-
+            <div className="col-xs-4 square" onClick={() => this.props.rowClick()}>
                 {this.state.stateValue}
             </div>
         );
