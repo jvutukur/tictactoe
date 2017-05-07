@@ -19,3 +19,4 @@ yarn-error.log*
 #project files
 .idea/*
 .idea/watcherTasks.xml
+.idea*
