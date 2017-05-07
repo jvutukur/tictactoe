@@ -12,11 +12,9 @@ class Row extends Component {
         };
 
     };
-    chnage(){
 
-    }
     render() {
-        const status = 'Next player: X';
+
         this.state = {
             one: this.props.numb,
             two: this.props.numb1,
@@ -24,9 +22,9 @@ class Row extends Component {
         };
         return (
     <div className="row">
-        <Square propValue={this.state.one} rowClick={()=> this.props.appClick(this.state.one)} />
+        <Square propValue={this.state.one} rowClick={()=> this.props.appClick(this.state.one)}  />
         <Square propValue={this.state.two} rowClick={()=> this.props.appClick(this.state.two)} />
-        <Square propValue={this.state.three} rowClick={() => this.props.appClick(this.state.three)}/>
+        <Square propValue={this.state.three} rowClick={() => this.props.appClick(this.state.three)} />
     </div>
         );
     }

@@ -10,14 +10,12 @@ class Square extends Component {
         };
     }
 
-
-
      render() {
          this.state = {
              stateValue: this.props.propValue,
          };
         return (
-            <div className="col-xs-4 square" onClick={() => this.props.rowClick()}>
+            <div className="col-xs-4 square" onClick={() => this.props.rowClick() }>
                 {this.state.stateValue}
             </div>
         );
