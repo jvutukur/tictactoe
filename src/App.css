@@ -2,12 +2,25 @@ body {
   background-color: #199;
   -webkit-font-smoothing: antialiased;
 }
+.container1 {
+  color: #99f;
+  padding: 50px;
+  font-size: 4em;
+  font-weight: bolder;
+  position:absolute;
+  top: 10%;
+  left: 30%;
 
+}
 .container {
   color: #99f;
   padding: 50px;
   font-size: 4em;
   font-weight: bolder;
+  position:absolute;
+  top: 30%;
+  left: 30%;
+
 }
 .title {
   padding: 0em;

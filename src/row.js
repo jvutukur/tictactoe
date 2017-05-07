@@ -2,14 +2,22 @@ import React, { Component } from 'react';
 import Square from './square';
 class Row extends Component {
 
-    render() {
-        return (
-<div className="row">
+    renderSquare(i) {
+        return <Square propValue={i} />;
+    }
 
-<Square number={this.props.numb} />
-    <Square number={this.props.numb1} />
-    <Square number={this.props.numb2} />
-</div>
+    render() {
+
+        const status = 'Next player: X';
+        var one = this.props.numb;
+        var two = this.props.numb1;
+        var three = this.props.numb2;
+        return (
+    <div className="row">
+        {this.renderSquare(one)}
+        {this.renderSquare(two)}
+        {this.renderSquare(three)}
+    </div>
 
 
 

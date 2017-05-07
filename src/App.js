@@ -6,19 +6,37 @@ import Row from './row'
 
 class App extends Component {
 
+    constructor()
+    {
+        super();
+        this.state = {
+          squares : Array(9).fill(null),
+        };
+        for(var i=0; i<9; i++){
+            this.state.squares[i]=i+1;//squares.
+        }
+
+    };
+    /*
+     position:absolute;
+     top: 30%;
+     left: 30%;
+     */
   render() {
+    const status = 'Next Player : X';
     return (
         <div>
 
-        <button class="btn" id="reset">reset</button>
-            <div className="container title">
+        <button className="btn"  id="reset">reset</button>
+            <div className="container1 title">
                 Tic Tac Toe</div>
-            <div className="container description">Two Human Players - X Moves First</div>
+
             <div className="container text-center">
-            <Row className="row" numb="1" numb1="2" numb2="3"/>
-            <Row className="row" numb="4" numb1="5" numb2="6"/>
-            <Row className="row" numb="7" numb1="8" numb2="9"/>
+            <Row className="row"  numb={this.state.squares[0]} numb1={this.state.squares[1]} numb2={this.state.squares[2]}/>
+            <Row className="row"  numb={this.state.squares[3]} numb1={this.state.squares[4]} numb2={this.state.squares[5]}/>
+            <Row className="row"  numb={this.state.squares[6]} numb1={this.state.squares[7]} numb2={this.state.squares[8]}/>
             </div>
+            <div className="container1 status">{status} </div>
         </div>
 
             );
